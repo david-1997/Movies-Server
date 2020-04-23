@@ -4,7 +4,6 @@ const bodyParser=require('body-parser');
 const mongoClient=require('mongodb');
 const cors=require('cors');
 const url='mongodb+srv://david:david@1997@cluster0-xpev5.mongodb.net/MovieDB?retryWrites=true&w=majority';
-app.set('PORT',process.env.PORT);
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -100,6 +99,6 @@ app.delete("/delete/:id", function (req, res) {
     });
 });
 
-app.listen(app.get('PORT'),function(){
-    console.log(app.get('PORT'))
+app.listen(process.env.PORT,function(){
+    console.log(process.env.PORT);
 });
