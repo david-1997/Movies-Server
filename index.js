@@ -3,8 +3,7 @@ const app=express();
 const bodyParser=require('body-parser');
 const mongoClient=require('mongodb');
 const cors=require('cors');
-//const url='mongodb+srv://david:david@1997@cluster0-xpev5.mongodb.net/MovieDB?retryWrites=true&w=majority';
-const url = "mongodb://localhost:27017"
+const url='mongodb+srv://david:david@1997@cluster0-xpev5.mongodb.net/MovieDB?retryWrites=true&w=majority';
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
