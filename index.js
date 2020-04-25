@@ -6,7 +6,6 @@ const cors=require('cors');
 const url='mongodb+srv://david:david@1997@cluster0-xpev5.mongodb.net/MovieDB?retryWrites=true&w=majority';
 app.use(cors());
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
 
 app.post('/create',function(req,res){
     mongoClient.connect(url,function(err,client){
