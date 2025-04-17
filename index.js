@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.post('/create',function(req,res){
     mongoClient.connect(url,function(err,client){
         if(err) throw err;
-        var db=client.db("sample_mflix")                           
+        var db=client.db("MovieDB")                           
         db.collection("movies").insertOne(req.body,function(err,data){  
             if(err) throw err;
                 client.close();
@@ -24,7 +24,7 @@ app.post('/create',function(req,res){
 app.get('/movies',function(req,res){
     mongoClient.connect(url,function(err,client){
         if(err) throw err;
-        var db=client.db("MovieDB")                           
+        var db=client.db("sample_mflix")                           
         var movies = db.collection("movies").find().toArray();
         movies.then(function (data) {
             client.close();
