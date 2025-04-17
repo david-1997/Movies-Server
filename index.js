@@ -24,7 +24,7 @@ app.post('/create',function(req,res){
 app.get('/movies',function(req,res){
     mongoClient.connect(url,function(err,client){
         if(err) throw err;
-        var db=client.db("sample_mflix")                           
+        var db=client.db("MovieDB")                           
         var movies = db.collection("movies").find().toArray();
         movies.then(function (data) {
             client.close();
