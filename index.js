@@ -3,7 +3,7 @@ const app=express();
 const bodyParser=require('body-parser');
 const mongoClient=require('mongodb');
 const cors=require('cors');
-const url='mongodb+srv://david:david@1997@cluster0-o20vy.mongodb.net/MovieDB?retryWrites=true&w=majority';
+const url = 'mongodb+srv://david:david%401997@cluster0-o20vy.mongodb.net/MovieDB?retryWrites=true&w=majority';
 app.use(cors());
 app.use(bodyParser.json());
 
