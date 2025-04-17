@@ -15,7 +15,7 @@ app.post('/create',function(req,res){
             if(err) throw err;
                 client.close();
                 res.json({
-                    message:"Data inserted"
+                    message: "Data inserted"
                 })                                       
         })
     })
